@@ -1,3 +1,9 @@
+using Application;
+using Infrastructure;
+using Persistence;
+using Presentation;
+using Scalar.AspNetCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 #region Add-layer-dependencies
@@ -21,6 +27,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
