@@ -14,7 +14,7 @@ public static class DependencyInjection
         // Add DbContext
         services.AddDbContext<AppDbContext>(options =>
         {
-            options.UseNpgsql(configuration.GetConnectionString("PostgresDb"));
+           options.UseNpgsql(configuration.GetConnectionString("PostgresDb"));
         });
         // Add Redis
    
